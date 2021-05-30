@@ -7,6 +7,8 @@ import modelos.Conta;
 
 public class Banco {
 
+	private static final String String = null;
+
 	public static void main(String[] args) {
 		
 		Locale.setDefault(Locale.US);
@@ -15,12 +17,15 @@ public class Banco {
 		float operation;
 		double valorDinheiro;
 		int x = 0;
-		String nameCont;
+		String name;
+		String cpf; 
 		
+		System.out.println("Digite o seu primeiro nome: ");
+		name = sc.next();
 		System.out.println("Digite o CPF da conta: ");
-		nameCont = sc.next();
+		cpf = sc.next();
 		
-		Conta a = new Conta(nameCont);
+		Conta a = new Conta(name,cpf);
 
 
 		
@@ -52,6 +57,13 @@ public class Banco {
 			}
 			
 			else if (operation == 4) {
+				System.out.println("Dados Cadastrados: ");
+				System.out.println();
+				System.out.println("NOME: "+name);
+				System.out.println("CPF: "+cpf);
+				
+			}
+			else if (operation == 5) {
 				System.out.println("Obrigado por utilizar nosso sistema.");
 				System.out.println();
 				break; 

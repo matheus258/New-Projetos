@@ -4,11 +4,24 @@ public class Conta {
 	
 	double saldo;
 	String conta;
-	String name;
 	
-	public Conta(String conta) {
+	String name;
+	String cpf;
+	
+	/*
+	public Conta(String name, String cpf) {
+		super();
+		this.name = name;
+		this.cpf = cpf;
+	}
+	*/
+	
+	
+	
+	public Conta( String name, String cpf) {
 		saldo = 0;
-		this.conta = conta;
+		this.name = name;
+		this.cpf = cpf;
 	}
 	
 	public void depositar(double deposito ) {
@@ -38,6 +51,7 @@ public class Conta {
 		System.out.println(" 1 para depositar.");
 		System.out.println(" 2 para sacar.");
 		System.out.println(" 3 para ver o saldo.");
-		System.out.println(" 4 para sair. ");
+		System.out.println(" 4 para informar dados da conta.");
+		System.out.println(" 5 para sair. ");
 	}
 }
