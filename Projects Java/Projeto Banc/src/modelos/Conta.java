@@ -44,8 +44,6 @@ public class Conta {
 		
 		System.out.println("________________________");
 		System.out.println();
-		System.out.println("Bem vindo ao sistema!");
-		System.out.println();
 		System.out.println("Selecione a operação que deseja realizar: ");
 		System.out.println();
 		System.out.println(" 1 para depositar.");

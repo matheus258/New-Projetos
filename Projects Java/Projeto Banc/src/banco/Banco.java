@@ -7,8 +7,6 @@ import modelos.Conta;
 
 public class Banco {
 
-	private static final String String = null;
-
 	public static void main(String[] args) {
 		
 		Locale.setDefault(Locale.US);
@@ -26,9 +24,8 @@ public class Banco {
 		cpf = sc.next();
 		
 		Conta a = new Conta(name,cpf);
-
-
-		
+	
+		System.out.println("Bem vindo ao sistema!");
 		while (x == 0) {
 			
 			a.menu();
@@ -64,6 +61,7 @@ public class Banco {
 				
 			}
 			else if (operation == 5) {
+				System.out.println();
 				System.out.println("Obrigado por utilizar nosso sistema.");
 				System.out.println();
 				break; 
