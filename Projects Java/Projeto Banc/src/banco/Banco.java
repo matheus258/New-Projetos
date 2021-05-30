@@ -12,11 +12,16 @@ public class Banco {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		Conta a = new Conta("Conta 1");
-
 		float operation;
 		double valorDinheiro;
 		int x = 0;
+		String nameCont;
+		
+		System.out.println("Digite o CPF da conta: ");
+		nameCont = sc.next();
+		
+		Conta a = new Conta(nameCont);
+
 
 		
 		while (x == 0) {
