@@ -2,28 +2,43 @@ package modelos;
 
 public class Conta {
 	
-	double saldo;
 	String conta;
-	
+	double saldo;	
 	String name;
 	String cpf;
+	int numCont;
 	
-	/*
-	public Conta(String name, String cpf) {
-		super();
-		this.name = name;
-		this.cpf = cpf;
+	public Conta() {
+		
 	}
-	*/
 	
-	
-	
-	public Conta( String name, String cpf) {
+	public Conta( String name, String cpf, int numCont) {
 		saldo = 0;
 		this.name = name;
 		this.cpf = cpf;
+		this.numCont = numCont;
 	}
 	
+	
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public int getNumCont() {
+		return numCont;
+	}
+
+
+	//Métodos para o Programa 
 	public void depositar(double deposito ) {
 		saldo += deposito;
 	}

@@ -12,19 +12,22 @@ public class Banco {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
+		int x = 0;
 		float operation;
 		double valorDinheiro;
-		int x = 0;
 		String name;
 		String cpf; 
+		int numCont;
 		
-		System.out.println("Digite o seu primeiro nome: ");
-		name = sc.next();
-		System.out.println("Digite o CPF da conta: ");
+		System.out.print("Digite o seu nome completo: ");
+		name = sc.nextLine();
+		System.out.print("Digite o CPF da conta: ");
 		cpf = sc.next();
+		System.out.print("Digite o número da conta: ");
+		numCont = sc.nextInt();
+		Conta a = new Conta(name,cpf, numCont);
 		
-		Conta a = new Conta(name,cpf);
-	
+		System.out.println();
 		System.out.println("Bem vindo ao sistema!");
 		while (x == 0) {
 			
@@ -58,8 +61,9 @@ public class Banco {
 				System.out.println();
 				System.out.println("NOME: "+name);
 				System.out.println("CPF: "+cpf);
-				
+				System.out.println("CONTA: "+numCont);
 			}
+			
 			else if (operation == 5) {
 				System.out.println();
 				System.out.println("Obrigado por utilizar nosso sistema.");
