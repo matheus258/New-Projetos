@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css" type="text/css">
+    <link rel="shortcut icon" href="Icon/html_ico.ico" type="image/x-icon">
+    <title>Formulário | TCC</title>
+    <!-- Script JS -->
+    <script src="Javascript/index.js"></script>     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        
+    
+</head>
+<body >
+    <!--codigo chatbox--> 
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+        chat-icon="https://freesvg.org/img/1538298822.png"
+        intent="WELCOME"
+        chat-title="Atendimento"
+        agent-id="695c582c-4546-4294-be9e-abfaf783b338"
+        language-code="pt-br"
+    ></df-messenger>
+
+    <!-- Caixa de formulario-->
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Formulário de Pesquisa</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelImput" > Nome Completo </label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="nome" class="labelImput"> Email </label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="tel" name="tel" id="tel" class="inputUser" required>
+                    <label for="nome" class="labelImput"> Telefone </label>
+
+                </div>
+                <br>
+                <p>Sexo:</p>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino </label>
+                <br>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino </label>
+                <br>
+                <input type="radio" id="outro" name="genero" value="outro" required>
+                <label for="outro">Outro </label>
+                <br><br><br>
+               
+                <label for="data_nascimento"><b> Data de Nascimento  </b></label>
+                <input type="date" name="data_nascimento" id="data_nascimento"  required> 
+                <br>
+                
+                <!-- testes para acrescentar profissão -->
+                <p>Profissão:</p>
+                <div id="menu">
+                    <input type="radio" id="b1" name="profissao" data-nome="c1" class="menu_iten" required>
+                    <label for="vendedor">Vendedor </label>
+                    <br>
+                    <input type="radio" id="b2" name="profissao" data-nome="c2" class="menu_iten" required>
+                    <label for="supervisor">Supervisor </label>
+                    <br>
+                    <input type="radio" id="b3" name="profissao" data-nome="c3" class="menu_iten" required>
+                    <label for="gerente">Gerente </label>
+                    <br>
+                    <input type="radio" id="b4" name="profissao" data-nome="c4" class="menu_iten" required>
+                    <label for="outro">Outra Profissão </label>
+                   </div>
+                
+                   <p id="c1" class="perguntas_ocultas">PERGUNTAS PARA VENDEDOR</p>
+                   <p id="c2" class="perguntas_ocultas">PERGUNTAS PARA SUPERVISOR</p>
+                   <p id="c3" class="perguntas_ocultas">PERGUNTAS PARA GERENTE</p>
+                   <p id="c4" class="perguntas_ocultas">PERGUNTAS PARA OUTRA PROFISSÂO</p>
+
+                <!--
+                <input type="radio" id="vendedor" name="profissao" value="1" required>
+                <label for="vendedor">Vendedor </label>
+                <br>
+                <input type="radio" id="supervisor" name="profissao" value="2" required>
+                <label for="supervisor">Supervisor </label>
+                <br>
+                <input type="radio" id="gerente" name="profissao" value="3" required>
+                <label for="gerente">Gerente </label>
+                <br>
+                <input type="radio" id="outro" name="profissao" value="4" required>
+                <label for="outro">Outra Profissão </label>
+                <br><br>
+                <button id="submitProf" name="submitProf" onclick="checar()">Confirmar Profissão</button><br />
+
+                 
+                
+                 -->
+                 
+                
+                 <br><br>
+                 <input type="submit" nome="submit" id="submit">
+
+            </fieldset>
+        </form>
+
+    </div>
+    
+</body>
+</html>
