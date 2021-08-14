@@ -56,3 +56,13 @@ form button {
 form button:hover {
     background: var(--primary-color-dark);
 }
+
+.paragrafo-resultado, .bad {
+    background: rgb(109, 225, 180);
+    padding: 10px 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+.bad {
+    background: rgb(211, 136, 136);
+}
