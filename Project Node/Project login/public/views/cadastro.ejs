@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Project</title>
+    <link rel="stylesheet" href="../css/style_cadastro.css">
+
+</head>
+<body>
+    
+    <script src="../js/cadastro.js"></script>
+    
+    <div class="container" center="center">
+        <div class="card">
+            <h1> Cadastro </h1>
+
+            <div class="label-float">
+                <input type="text" id="nome" peceholder=''>
+                <label id="labelNome" for="nome">Nome</label>
+            </div>
+            <br>
+
+            <div class="label-float">
+                <input type="text" id="usuario" peceholder=''>
+                <label id="labelUsuario" for="usuario">Usuário</label>
+            </div>
+            <br>
+            <div class="label-float">
+                <input type="password" id="senha" peceholder=''>
+                <label id="labelSenha" for="senha">Senha</label>
+            </div>
+            <br>
+            <div class="label-float">
+                <input type="password" id="confirmSenha" peceholder=''>
+                <label id="labelconfirmSenha"for="ConfirmSenha">Confirmar Senha</label>
+            </div>
+            <br>
+            <div>
+                <button onclick="cadastrar()">Cadastrar</button>
+            </div>
+            <br><br>
+            
+            <p>Voltar para 
+                <a href="http://localhost:3000">Login. </a>
+            </p>
+        </div>
+    </div>
+        
+</body>
+</html>

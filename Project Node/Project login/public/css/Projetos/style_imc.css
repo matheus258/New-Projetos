@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+   
+    
+}
+body {
+    background-color: #89c9eca2;
+
+}
+#formulario {
+    
+    font-family: arial,sans-serif;
+    padding: 40px;
+    border-radius: 5%; 
+    background-color: #CFD3D2;
+}

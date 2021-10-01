@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+   
+    
+}
+body {
+    background-color: #89c9eca2;
+
+}
+.menu {
+    
+    font-family: arial,sans-serif;
+    padding: 30px;
+    border-radius: 5%; 
+    background-color: #CFD3D2;
+}
+#menu_project {
+    justify-content: right;
+    
+}
+label{
+    padding:5px;
+    margin: 10px;
+}
