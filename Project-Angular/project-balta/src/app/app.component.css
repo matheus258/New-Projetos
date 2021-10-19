@@ -1,0 +1,39 @@
+.title {
+  text-align: center;
+  font-size: 3em;
+}
+
+ul {
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+  background: #fff;
+  border-radius: 5px;
+
+}
+button {
+  cursor: pointer;
+}
+
+li {
+  padding: 10px;
+  margin: 10px;
+  font-size: 1em;
+  font-style: italic;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+li button {
+  border: none;
+  background-color: #fff;
+  font-size: 1em;
+  float: right;
+  opacity: 0.6;
+  transition: opacity 1s;
+}
+
+li button:hover {
+  opacity: 1;
+  transition: opacity 1s;
+}

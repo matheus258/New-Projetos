@@ -1,0 +1,15 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family:  'Crimson Text', serif;;
+  font-weight: 300;
+
+
+  background: rgba(0, 0, 255, 0.527);
+  background: -moz-linear-gradient(60deg, rgba(0, 0, 255, 0.527) 0%, #C641CF 100%);
+  background: linear-gradient(60deg, rgba(0, 0, 255, 0.801) 0%, #5ebbe08c 100%);
+
+}
