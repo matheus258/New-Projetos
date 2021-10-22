@@ -1,5 +1,9 @@
 # ProjectBalta
 
+Projeto Lista de tarefas:
+--------------------------
+Aplicação que consiste em uma página que o usuario pode adicionar e remover tarefas. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
 
 ## Development server
