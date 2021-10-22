@@ -1,6 +1,8 @@
 Projeto formulário 
 -------------------
 
-Criação de chatbot
-Campo de inscrição
-Formulario para pesquisas.
+Criação de chatbot; 
+
+Campo de inscrição; 
+
+Formulario para pesquisas;
