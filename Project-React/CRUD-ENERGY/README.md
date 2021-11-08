@@ -7,11 +7,7 @@ Front-end programado em React-Js e Back-end com json Server.
 
 ## `Para abrir aplicação siga os passos:`
 
-Passos para abrir a aplicação:.<br />
-
 Abra o app no TERMINAL com os seguintes comandos:.<br />
-
-Abra o diretório e inicie o projeto:
 
 Primeiro instale as dependências com comando npm i ou npm install dentro das pastas backend e meu-projeto,.<br />
 <br />
