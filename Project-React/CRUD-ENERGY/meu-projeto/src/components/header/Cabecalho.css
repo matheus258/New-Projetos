@@ -1,0 +1,165 @@
+/* Fontos de Estilo */
+@import url('../../assets/css/fontes.css');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.header-home {
+  font-family:  'Noto Serif Display', serif;
+  background: no-repeat center/cover url('../../assets/img/backgrand/paisagem_placa.jpg');
+  height: calc(80vh - 150px);
+
+  color: rgb(2, 0, 15);
+  box-shadow: 0 0 0.1rem black;
+}
+
+.header-home nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-cabecalho {
+  display: flex;
+
+}
+
+.menu-cabecalho li {
+  color: rgb(255, 255, 255);
+  list-style-type: none;
+  cursor: pointer;
+  padding-left: 2rem;
+  padding: 15px ;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: -0.1px -0.1px 0  black, -0.1px -0.1px 0 black;
+  transition: 1s;
+
+}
+
+.menu-cabecalho li:hover {
+  color: rgba(0, 0, 0, 0.247);
+  text-decoration: underline rgba(0, 0, 0, 0.247);
+  display: flex;
+}
+
+.logo {
+  padding: 0 0 0 10px;
+  width: 150px;
+  height: 70px;
+}
+
+.header-content {
+  color: #fff;
+  padding: 150px 50px;
+  text-align: center;
+  background-size: cover;
+  background-size: contain;
+
+}
+
+.header-content h1 {
+  padding: 10px 5px;
+  font-size: 4rem;
+  font-style: italic;
+  text-shadow: rgba(0, 0, 0, 0.671) 0.1em 0.1em 0.2em;
+
+}
+
+.header-content h2{
+  padding: 0 0 30px;
+  text-shadow: rgba(0, 0, 0, 0.61) 0.1em 0.1em 0.5em;
+
+}
+
+.header-content h1, h2 {
+
+  font-family: 'Noto Serif Display', serif;
+  background-size: auto;
+
+}
+
+.header-content Info {
+  padding: 20px 20px;
+
+}
+
+/* Botao de mais detalhes Header.  */
+.button_info {
+  padding: 15px 15px;
+  margin: 20px;
+  border: 0;
+  background-color: #9bbcca;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+/*   Responsividade de Tela   */
+
+@media (max-width: 767px) {
+  .menu-cabecalho {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    background: #9BBAD0;
+    margin: 0;
+
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .menu-cabecalho li {
+    color: #4c4e4e;
+  }
+
+  .header-home {
+    height: calc(100vh - 200px);
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-cabecalho {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    background: #9BBAD0;
+    margin: 0;
+
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .header-home nav ul li {
+    color: #4c4e4e;
+  }
+
+  .header-home {
+    height: calc(100vh - 150px);
+    background:  linear-gradient(#9EBED5,#8BA4B8);
+  }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+}
+
+@media (min-width: 1200px) {
+
+}

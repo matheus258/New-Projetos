@@ -1,0 +1,81 @@
+@import url('./fontes.css');
+
+.header-usuario {
+  padding: 0;
+  margin: 0;
+  height: 200px;
+  background: #91BAD1;
+}
+.header-usuario h1 {
+  font-family: 'Noto Serif Display', serif;
+  font-size: 3em;
+  color: #fff;
+  text-shadow: black 0.1em 0.1em 0.2em;
+
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.dados-crud {
+  background-color: #d7dde2;
+  height: auto;
+  text-align: center;
+  padding: 60px;
+}
+
+.dados-crud h1 {
+  color:rgb(255, 255, 255);
+  padding: 0 0 50px 0;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  text-shadow: rgba(0, 0, 0, 0.623) 0.1em 0.1em 0.5em
+}
+
+.menu-crud {
+  display: flex;
+  text-align: center;
+  padding: 10px;
+  justify-content: center;
+  margin: 10px;
+
+}
+.menu-crud Link {
+  text-decoration: none;
+
+}
+
+.menu-crud h2 {
+  padding: 5px;
+  margin-left: 30px;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.dados-usuarios + .dados-usuarios {
+  border-top: 1px solid #eee;
+}
+
+.dados-usuarios {
+  background-color: azure;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+
+  margin: 0 auto;
+  width: 50%; /* Altere para o valor da largura desejada. */
+  padding: 15px;
+  text-align: center;
+  border-radius: 0 8px 8px 0;
+}
+
+.crud-name {
+  width: 200px;
+  display: flex;
+}
+
+.icons-crud Link {
+  text-decoration: none;
+}
+
+

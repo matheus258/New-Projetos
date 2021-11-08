@@ -1,0 +1,21 @@
+/* Costumização das redes sociais no footer */
+.redes {
+  flex-direction: row;
+  display: flex;
+  padding: 20px 10px;
+
+}
+
+.redes a img {
+  height: 40px;
+  flex-direction: row;
+  display: flex;
+  padding: 5px 15px;
+}
+
+.redes .apresentacao {
+  flex-direction: row;
+  display: flex;
+  padding: 15px 15px;
+  font-style: italic;
+}

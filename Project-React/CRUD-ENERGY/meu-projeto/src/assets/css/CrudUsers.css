@@ -1,0 +1,23 @@
+.crud-criacao Button{
+  background-color:#fff;
+  margin: 20px;
+}
+
+.crud-criacao{
+  margin: 40px 350px;
+
+}
+
+.link-voltar{
+  background-color: azure;
+  text-decoration: none;
+  padding: 7px;
+  border-radius: 8px;
+}
+
+@media (max-width: 1300px) {
+  .crud-criacao{
+    margin: 40px 200px;
+
+  }
+}

@@ -1,0 +1,64 @@
+/* Fontos de Estilo */
+@import url('../../assets/css/fontes.css');
+
+.registro-crud {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  background-color: #E5EBF1; /* #354D6E; */
+  height: 600px;
+}
+
+.registro-crud h2 {
+  padding: 5;
+  color: #F0FFFF;
+}
+
+.registro-info {
+  background-color: #F0FFFF;
+  height: 350px;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 8px;
+
+  flex-direction: column;
+
+}
+
+.registro-info label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.registro-info label input{
+  height: 40px;
+  font-size: 17px;
+  border: 1px solid rgb(196, 192, 192);
+  padding: 0 10px;
+  border-radius: 4px;
+  margin-top: 5px;
+
+
+}
+.registro-info label input:focus {
+  border: 1px solid #7bb1fd;
+}
+
+.cadastro-usuario {
+  display: flex;
+}
+
+.button-crud{
+  padding: 15px 15px;
+  margin: 20px;
+  border: 0;
+  background-color: #9bbcca;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}

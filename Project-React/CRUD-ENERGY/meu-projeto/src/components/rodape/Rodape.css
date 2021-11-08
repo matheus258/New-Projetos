@@ -1,0 +1,45 @@
+@import url('../../assets/css/fontes.css');
+
+.footer-principal {
+  height: 170px;
+  color: white;
+  text-align: end;
+  background: rgba(44, 93, 133, 0.705);
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.footer-principal .creditos {
+  padding: 130px 15px 15px 5px;
+  font-family: 'Noto Serif Display', serif;
+  font-size: 15px;
+}
+
+.footer-principal .informacao-footer {
+  padding: 50px 150px ;
+  width: 900px;
+  flex-direction: row;
+  display: flex;
+
+}
+.informacao-footer ul {
+  justify-content: space-around;
+  display: flex;
+
+}
+
+.informacao-footer ul li {
+  list-style-type: none;
+  text-align: center;
+  flex-direction: row;
+  display: flex;
+  padding: 0 15px 0 0;
+
+}
+
+.informacao-footer ul li a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 15px;
+}

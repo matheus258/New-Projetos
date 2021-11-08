@@ -1,0 +1,62 @@
+@import url('../../assets/css/fontes.css');
+
+.pacotes {
+  background-image: linear-gradient(#C3D1DE, #fff);
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+pointer
+
+.link-card {
+  text-decoration: 'none';
+}
+
+.card {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  width: 250px;
+  height: 250px;
+  background-image: linear-gradient(rgba(77, 118, 153, 0.596), #b1bcc5, #C3D1DE);
+  border-radius: 20px 0;
+  color: #fff;
+  margin: auto;
+
+  padding: 55px 20px;
+  margin: 120px 40px;
+  justify-content: center;
+  text-align: center;
+  transition: 3s;
+
+}
+
+section div p {
+  padding: 20px;
+}
+
+section div:hover {
+  background: rgba(0, 0, 0, 0.247);
+}
+
+section div img {
+  background-color: rgba(96, 105, 124, 0.082);
+  border-radius: 50%;
+  width: 120px;
+  padding: 7px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 767px) {
+  .card {
+    margin: 70px 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    margin: 70px 15px;
+  }
+}

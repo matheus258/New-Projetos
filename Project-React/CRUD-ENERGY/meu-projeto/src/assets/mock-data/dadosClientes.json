@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "nomeCliente": "Juan Rodrigues",
+      "usinaId": "1",
+      "percentualDeParticipacao": "100"
+    },
+    {
+      "id": "5",
+      "nomeCliente": "Mikael Santos",
+      "usinaId": "2",
+      "percentualDeParticipacao": "50"
+    },
+    {
+      "id": "2",
+      "nomeCliente": "Jonathan Alves G.",
+      "usinaId": "2",
+      "percentualDeParticipacao": "50"
+    },
+    {
+      "id": "3",
+      "nomeCliente": "Abraão Vinicius ",
+      "usinaId": "22",
+      "percentualDeParticipacao": "100"
+    },
+    {
+      "id": "15",
+      "nomeCliente": "Melissa Cardoso",
+      "usinaId": "40",
+      "percentualDeParticipacao": "35"
+    }
+  ]
+}
