@@ -18,10 +18,9 @@ Primeiro instale as dependências com comando npm i ou npm install dentro das pa
 - - - - - - - - - - - - - - - -
 Para abrir o projeto backend no servidor, abra o diretório backend:.<br />
 -------------------------
-### `cd backend`.<br />
+### `cd meu-projeto`.<br />
 
-inicie o projeto:.<br />
-
+inicie o projeto:<br />
 
 ### `npm run server`.<br />
 
