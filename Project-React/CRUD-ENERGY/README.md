@@ -16,7 +16,7 @@ Para abrir o projeto backend no servidor, abra o diretório backend:.<br />
 -------------------------
 ### `cd meu-projeto`.<br />
 
-inicie o projeto:<br />
+inicie o servidor JSON:<br />
 
 ### `npm run server`.<br />
 
