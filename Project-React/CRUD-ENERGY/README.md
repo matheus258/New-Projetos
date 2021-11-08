@@ -2,7 +2,7 @@ Aplicação React Js, CRUD e Graficos com JSON e Finanças;
 
 Descrição: O projeto tem o intuito de simular o gerenciamento de  usinas fotovoltaicas, desse modo pode-se criar usuários e analisar gráficos com os dados do seu desempenho diário. <br />
 
-Front-end progrmado em React-Js e Back-end com json Server. 
+Front-end programado em React-Js e Back-end com json Server. 
 ---------------------------------
 
 ## `Para abrir aplicação siga os passos:`
