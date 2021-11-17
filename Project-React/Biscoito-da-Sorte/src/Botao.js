@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class Botao extends Component{
     render(){
       return(
-        <div>
-          <button onClick={}> { this.props.nome } </button>
+        <div className="botao">
+          <button className="botao-sorte" onClick={this.props.acaoBtn}> { this.props.nome } </button>
         </div>
       );
     }

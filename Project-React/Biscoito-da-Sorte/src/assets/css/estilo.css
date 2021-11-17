@@ -3,10 +3,13 @@
   padding: 0;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap");
+
+/*   font-family: 'Ubuntu', sans-serif;    */
+
 .container {
   background-color: rgba(141, 219, 230, 0.603);
   height: 950px;
-
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -16,14 +19,24 @@
 
 .img {
   width: 450px;
-  margin-top: 50px;
 }
-.textofrase{
-    font-style: italic;
-    color: #dd7b22;
-    text-align: center;
+.textofrase {
+  font-style: italic;
+  color: #dd7b22;
+  text-align: center;
 }
 
-.botao{
+.botao {
+  padding: 25px;
+}
 
+.botao-sorte {
+  padding: 10px;
+  border-radius: 8px;
+
+  border-style: none;
+  background: rgba(86, 142, 206, 0.849);
+  color: aliceblue;
+  font-size: 15px;
+  font-family: "Ubuntu", sans-serif;
 }
