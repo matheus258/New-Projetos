@@ -16,6 +16,12 @@
   justify-content: center;
   align-items: center;
 }
+.container h1 {
+  color: rgba(86, 142, 206, 0.849);
+  font-size: 50px;
+  font-style: italic;
+  text-shadow: 2px 2px 2px #00000041;
+}
 
 .img {
   width: 450px;
