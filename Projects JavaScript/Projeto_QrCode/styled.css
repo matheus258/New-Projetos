@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#fff, #9C9C9C);
+}
+.container {
+    height: 300px;
+    width: 500px;
+    max-width: 600px;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 50px 100px;
+    transition: heigth 0.5s ease;
+
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+}
+.container.ativado{
+    height: 630px ;
+}
+header h1{
+    text-align: center;
+    font-weight: 100;
+    font-size: 2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header p {
+    color: #707070;
+    text-align: center;
+    margin-top: 10px;
+}
+.container .form {
+    padding: 25px 0 25px;
+}
+.container :where(input,button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    margin-top: 5px;
+}
+.form button{
+    cursor: pointer;
+    background: #3d3d3d;
+    color: #fff;
+    font-size: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.form button:hover{
+    background:  #505050;
+    text-decoration: underline;
+    transition: 1s;
+}
+.form input{
+    padding: 0 17px;
+    font-size: 18px;
+    border: 1px solid #d6d6d6;
+}
+section .qrcode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 33px 0;
+    opacity: 0;
+
+}
+section .img {
+    width: 300px;
+    height: auto;
+    opacity: 1;
+
+}
+
+.container.ativado .img {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s;
+}
+/* Quando apagar texto no imput a imagem ira desaparecer. */
+.container.desativado .img {
+    opacity: 0;
+}
