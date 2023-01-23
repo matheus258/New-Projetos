@@ -79,7 +79,7 @@ section .qrcode {
 section .img {
     width: 300px;
     height: auto;
-    opacity: 1;
+    opacity: 0;
 
 }
 

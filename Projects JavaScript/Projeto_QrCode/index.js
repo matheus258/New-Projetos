@@ -18,14 +18,12 @@ generateBtn.addEventListener('click', () => {
     qrImg.addEventListener('load', () => {
         generateBtn.innerText = 'Gerar Qr Code';
         container.classList.add('ativado');
-        container.classList.remove('desativado');
     })
 
 });
-// Quando imput não tiver valor, esconder imagem e apagar classe.
+// Quando imput não tiver valor, esconder imagem.
 qrInput.addEventListener('keyup', () => {
     if(!qrInput.value){
         container.classList.remove('ativado');
-        container.classList.add('desativado');
     }
 })
