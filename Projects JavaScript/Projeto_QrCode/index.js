@@ -26,4 +26,4 @@ qrInput.addEventListener('keyup', () => {
     if(!qrInput.value){
         container.classList.remove('ativado');
     }
-})
+});

@@ -1,0 +1,46 @@
+@import url(//db.onlinewebfonts.com/c/84cb021d5f9af287ffff84b61beef6dc?family=clockicons);
+@font-face {font-family: "clockicons"; src: url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.eot"); src: url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.woff") format("woff"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.svg#clockicons") format("svg"); }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #d4d4d4;
+}
+.container {
+    background-color: #d4d4d4;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.container section {
+    background-color: #bbbbbb;
+    display: flex;
+    margin: 100px;
+    padding: 50px;
+    width: 400px;
+    height: 150px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    color: #dadada;
+    text-align: center;
+
+}
+.container h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    /* text-decoration: underline; */
+    font-weight: 100;
+    color: orangered;
+}
+#span {
+    font-size: 4em;
+    font-family:'clockicons';
+    align-items: center;
+    text-align: center;
+    color: orangered;
+    margin-top: 20px;
+}
