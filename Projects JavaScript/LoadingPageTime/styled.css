@@ -1,6 +1,8 @@
 @import url(//db.onlinewebfonts.com/c/84cb021d5f9af287ffff84b61beef6dc?family=clockicons);
 @font-face {font-family: "clockicons"; src: url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.eot"); src: url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.woff") format("woff"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.svg#clockicons") format("svg"); }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Oxanium:wght@800&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -13,8 +15,27 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-direction: column;
 }
-.container section {
+.header {
+    background-image: linear-gradient(to bottom, transparent 0%, #D4D4D4 95%), url(src/bg-primare.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 3em;
+    font-weight: 100;
+    color: #ffffff;
+}
+.container .sectionTime {
     background-color: #bbbbbb;
     display: flex;
     margin: 100px;
@@ -29,7 +50,7 @@ body {
     text-align: center;
 
 }
-.container h1 {
+.container .sectionTime h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
     /* text-decoration: underline; */
@@ -43,4 +64,64 @@ body {
     text-align: center;
     color: orangered;
     margin-top: 20px;
+}
+
+.sectionFrase {
+    display: flex;
+    flex-direction: row;
+    color: rgb(43, 43, 43);
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    border-top: 2px solid rgb(252, 104, 50);
+
+}
+.sectionFrase h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.7em;
+    font-weight: 100;
+    padding: 10px;
+    background-color: rgb(252, 104, 50);
+
+}
+.sectionFrase img {
+    margin: 50px;
+    width: 500px;
+    border-radius: 14px;
+}
+footer{
+    color: orangered;
+    background-color: black;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+footer span p {
+    font-size: 1.3em;
+    margin: 5px;
+}
+footer ul {
+    display: flex;
+    list-style-type: none;
+}
+footer ul li {
+    margin-left: 10px;
+}
+footer ul li a {
+    text-decoration: none;
+}
+footer ul li p {
+    color: orangered;
+    text-decoration: none;
+    font-size: 1.4em;
+    margin-top: 10px;
+}
+footer ul li p:hover{
+    color:#bbbbbb;
+    transition: 0.5s;
 }
