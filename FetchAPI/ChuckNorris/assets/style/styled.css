@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+}
+
+.headerPage {
+    background-color: #000000;
+    height: 8rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.headerPage h1 {
+    color: #FEFEFE;
+}
+.container {
+    background-color: #B3C2D8;
+    height: 650px;
+}
+
+.fraseRandom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    text-align: center;
+}
+.fraseRandom img {
+
+}
+.fraseRandom h1 {
+    color: #c9d0da;
+    font-size: 35px;
+    width: 100%;
+}
+.fraseRandom h1 span {
+    background-color: #000000;
+}
+
+/* Galeria */
+.galeria {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.galeria div img {
+    width: 100%;
+    height: 300px;
+}
