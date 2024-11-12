@@ -12,7 +12,7 @@
 	<artifactId>projectfood-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>projectfood-api</name>
-	<description>Sistema de delivery de api com Spring Boot</description>
+	<description>Sistema de delivery, com API com Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -27,7 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>12</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -39,6 +39,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 	</dependencies>
 
