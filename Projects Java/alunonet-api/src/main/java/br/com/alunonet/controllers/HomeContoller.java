@@ -15,11 +15,11 @@ public class HomeContoller {
 		return mv;
 	}
 	
-	@GetMapping("/contato")
+	@GetMapping("/cadastrar")
 	public ModelAndView contatos() {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("home/contato");
-		mv.addObject("msg", "Bem vindo a pagina de contatos!");
+		mv.setViewName("home/cadastrar");
+		mv.addObject("msg", "Bem vindo a pagina de cadstros!");
 		return mv;
 	}
 

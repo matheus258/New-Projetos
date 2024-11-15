@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 nav {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
 	height: 150px;
@@ -37,6 +34,7 @@ a {
 	font-optical-sizing: auto;
 	font-weight: weight;
 	font-style: normal;
+	font-size: 1.6em;
 }
 
 .butoes {
@@ -46,6 +44,11 @@ a {
 .wm {
 	gap: 10px;
 	margin: 5px;
+}
+
+.wm button {
+	border: solid 2px #004eb7 ;
+	color: #004eb7;
 }
 
 .container {
@@ -62,4 +65,37 @@ a {
 	font-size: 1.25em;
 	position: sticky;
 	height: 100px;
+}
+
+.navbar-collapse {
+    background-color: black; /* Adapta ao fundo */
+}
+
+/* RESPONSIVIDADE*/
+@media screen and (max-width: 992px) {
+	.butoes {
+		display: flex;
+		flex-direction: column;
+	}
+	.wm {
+		gap: 10px;
+		margin: 5px;
+		width: 100%;
+
+		align-items: center;
+		justify-content: center;
+		display: flex;
+	}
+    nav {
+        flex-direction: column; /* Ajusta os itens para empilharem */
+        height: auto !important; /* Remove a altura fixa */
+    }
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens no menu expandido */
+    }
+    .navbar-brand .logo {
+        margin-bottom: 15px; /* Espaçamento extra para o logo */
+    }
 }
