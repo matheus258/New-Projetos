@@ -11,7 +11,15 @@ public class HomeContoller {
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("home/index");
-		mv.addObject("msg", "Mensagem enviada do controller");
+		mv.addObject("msg", "Bem vindo ao nosso site!");
+		return mv;
+	}
+	
+	@GetMapping("/contato")
+	public ModelAndView contatos() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("home/contato");
+		mv.addObject("msg", "Bem vindo a pagina de contatos!");
 		return mv;
 	}
 
