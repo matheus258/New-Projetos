@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="pt-br">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inserir alunos</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" th:href="@{/css/styled.css}">
+</head>
+<body>
+	<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+	
+	<div class="container">
+		<h3>Ultimos  alunos Adicionados</h3>
+		<hr>
+		<table class="table table-bordered table-hovers">
+			<thead>
+				<th scope="col">Nome:</th>
+			</thead>
+		</table>	
+	</div>
+		
+		<div th:replace="fragmentos/fragmentos :: rodape"></div>
+	</section>
+	
+	<script src="/js/main.js"></script>
+	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
