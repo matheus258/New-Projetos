@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="pt-br">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inserir alunos</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" th:href="@{/css/styled.css}">
+</head>
+<body>
+	<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+	
+	<section class="neo-section">
+		<div class="texto-main">
+			<h1>Sistema de gerenciamento de Alunos</h1>
+		</div>
+		<div class="container">
+			<h4>+ Inserir alunos</h4>
+			<hr>
+			
+			<form method="post" action="/InsertAlunos" th:object="${aluno}">
+				<div class="row">
+					<div class="col-md-6 form-group offset-md-3">
+						<label>Nome do Aluno:</label>
+						<input class="form-control" placeholder="Ex: Jessica Munique" th:field="*{nome}">
+					</div>	
+				</div>
+				<!--Curso-->
+				<div class="row">
+					<div class="col-md-6 form-group offset-md-3">
+						<label>Nome do Curso:</label>
+						<select class="form-control">
+							<option  th:each="curso : ${T(br.com.alunonet.Enums.Curso).values()}"
+							th:value="${curso}" th:text="${curso}"></option>
+						</select>
+					</div>	
+				</div>
+				<!--Matricula-->
+				<div class="row">
+					<div class="col-md-6 form-group offset-md-3">
+						<label>Gerar Matricula: </label>
+						<input class="form-control" id="matricula" th:field="*{matricula}">
+						<button type="button" class="btn btn-dark" onclick="gerarMatricula()" style="margin-top: 10px;">Gerar</button>
+					</div>	
+				</div>
+				<!--Status-->
+				<div class="row">
+					<div class="col-md-6 form-group offset-md-3">
+						<label>Status do Curso:</label>
+						<select class="form-control">
+							<option  th:each="status : ${T(br.com.alunonet.Enums.Status).values()}"
+							th:value="${status}" th:text="${status}"></option>
+						</select>
+					</div>	
+				</div>
+				<div class="row">
+					<button type="submit" class="btn btn-success offset-md-4">Salvar</button>
+					<button type="button" class="btn btn-outline-danger ml-4">Voltar</button>
+				</div>
+
+			</form>
+		</div>
+		
+		<div th:replace="fragmentos/fragmentos :: rodape"></div>
+	</section>
+	
+	<script src="/js/main.js"></script>
+	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

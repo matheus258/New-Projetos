@@ -3,7 +3,7 @@ package br.com.alunonet.model;
 import java.io.ObjectInputFilter.Status;
 
 import br.com.alunonet.Enums.Curso;
-import jakarta.annotation.Generated;
+//import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -54,6 +54,7 @@ public class Aluno {
 	public void setStatus(Status status) {
 		this.status = status;
 	}
+	
 
 
 

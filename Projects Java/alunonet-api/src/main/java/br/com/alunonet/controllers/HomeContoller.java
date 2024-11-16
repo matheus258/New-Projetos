@@ -14,13 +14,5 @@ public class HomeContoller {
 		mv.addObject("msg", "Bem vindo ao nosso site!");
 		return mv;
 	}
-	
-	@GetMapping("/cadastrar")
-	public ModelAndView contatos() {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("home/cadastrar");
-		mv.addObject("msg", "Bem vindo a pagina de cadstros!");
-		return mv;
-	}
 
 }
