@@ -34,13 +34,10 @@ public enum Curso {
     VETERINARIA("Medicina Veterinária"),
     FISIOTERAPIA("Fisioterapia");
 
-    private final String curso;
+    private String curso;
 
-    Curso(String curso) {
+    private Curso(String curso) {
         this.curso = curso;
     }
 
-    public String getDescricao() {
-        return curso;
-    }
 }

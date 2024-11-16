@@ -19,7 +19,7 @@
 			<h4>+ Inserir alunos</h4>
 			<hr>
 			
-			<form method="post" action="/InsertAlunos" th:object="${aluno}">
+			<form method="post" action="/InsertAlunos" th:object="${aluno}" autocomplete="off">
 				<div class="row">
 					<div class="col-md-6 form-group offset-md-3">
 						<label>Nome do Aluno:</label>
@@ -30,7 +30,7 @@
 				<div class="row">
 					<div class="col-md-6 form-group offset-md-3">
 						<label>Nome do Curso:</label>
-						<select class="form-control">
+						<select class="form-control" th:field="*{curso}">
 							<option  th:each="curso : ${T(br.com.alunonet.Enums.Curso).values()}"
 							th:value="${curso}" th:text="${curso}"></option>
 						</select>
@@ -44,19 +44,26 @@
 						<button type="button" class="btn btn-dark" onclick="gerarMatricula()" style="margin-top: 10px;">Gerar</button>
 					</div>	
 				</div>
-				<!--Status-->
+				<!--Estado	-->
 				<div class="row">
 					<div class="col-md-6 form-group offset-md-3">
 						<label>Status do Curso:</label>
-						<select class="form-control">
-							<option  th:each="status : ${T(br.com.alunonet.Enums.Status).values()}"
-							th:value="${status}" th:text="${status}"></option>
+						<select class="form-control" th:field="*{estado}">
+							<option  th:each="estado : ${T(br.com.alunonet.Enums.Estado).values()}"
+							th:value="${estado}" th:text="${estado}"></option>
 						</select>
+					</div>	
+				</div>
+				<!--Turno-->
+				<div class="row">
+					<div class="col-md-6 form-group offset-md-3">
+						<label>Turno:</label>
+						<input class="form-control" placeholder="Ex: Manhã" th:field="*{turno}">
 					</div>	
 				</div>
 				<div class="row">
 					<button type="submit" class="btn btn-success offset-md-4">Salvar</button>
-					<button type="button" class="btn btn-outline-danger ml-4">Voltar</button>
+					<a class="btn btn-outline-danger ml-4">Voltar</a>
 				</div>
 
 			</form>

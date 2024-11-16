@@ -1,11 +1,13 @@
 package br.com.alunonet.model;
 
-import java.io.ObjectInputFilter.Status;
 
 import br.com.alunonet.Enums.Curso;
+import br.com.alunonet.Enums.Estado;
 //import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -17,12 +19,20 @@ public class Aluno {
 	private Integer id;
 	@Column(name = "nome")
 	private String nome;
+	
 	@Column(name = "curso")
+	@Enumerated(EnumType.STRING)
 	private Curso curso ;
+	
 	@Column(name = "matricula")
 	private String matricula;
-	@Column(name = "status")
-	private Status status;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name = "estado")
+	private Estado estado;
+	
+	@Column(name = "turno")
+	private String turno;
 	
 	public Integer getId() {
 		return id;
@@ -36,26 +46,34 @@ public class Aluno {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Curso getCurso() {
-		return curso;
-	}
-	public void setCurso(Curso curso) {
-		this.curso = curso;
-	}
+
 	public String getMatricula() {
 		return matricula;
 	}
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
-	public Status getStatus() {
-		return status;
+	
+	public String getTurno() {
+		return turno;
 	}
-	public void setStatus(Status status) {
-		this.status = status;
+	public void setTurno(String turno) {
+		this.turno = turno;
+	}
+	public Curso getCurso() {
+		return curso;
+	}
+	public void setCurso(Curso curso) {
+		this.curso = curso;
 	}
 	
+	public Estado getEstado() {
+	    return estado;
+	}
 
-
+	public void setEstado(Estado estado) {
+	    this.estado = estado;
+	}
+	
 
 }

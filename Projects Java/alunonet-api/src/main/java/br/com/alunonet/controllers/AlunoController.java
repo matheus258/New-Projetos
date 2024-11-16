@@ -19,14 +19,14 @@ public class AlunoController {
 	public ModelAndView InsertAluno(Aluno aluno) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("Alunos/formAluno");
-		mv.addObject("Aluno", new Aluno());
+		mv.addObject("aluno", new Aluno());
 		return mv;
 	}
 	
 	@PostMapping("InsertAlunos")
 	public ModelAndView inserirAluno(Aluno aluno) {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("redirect:/");
+		mv.setViewName("redirect:/Aluno/listAlunos");
 		alunorepositorio.save(aluno);
 		return mv;
 	}
