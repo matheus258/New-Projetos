@@ -30,6 +30,13 @@ public class AlunoController {
 		alunorepositorio.save(aluno);
 		return mv;
 	}
+	@GetMapping("alunos-adicionados")
+	public ModelAndView listagemAlunos() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("Alunos/listAluno");
+		mv.addObject("alunosList", alunorepositorio.findAll());
+		return mv;
+	}
 	
 	
 }

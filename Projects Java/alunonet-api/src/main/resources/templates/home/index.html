@@ -23,14 +23,46 @@
 			</div>
 		</div>
 		
-		<div class="container">
+		<div class="container" style="justify-content: center; margin-top: 20px;">
+			<h4 style="text-align: center;">Bem-vindo ao Projeto Academy</h4>
+			<div class="informativo-home">
+				<img src="img/aluno_academy.jpg" style="width: 500px; ">
+				<div class="typing-container">
+				  <span id="dynamic-text"></span>
+				  <span class="cursor">|</span>
+				</div>
+			</div>
+			
+			
+			<section>
+				<h3 style="text-align: center; margin-top: 55px;">Por que escolher nosso sistema?</h3>
+			</section>
+			<ul class="informativo-list" style="text-align: center;">
+				<li>Organização Simplificada</li>
+				<li>Comunicação Integrada</li>
+				<li>Relatórios Personalizados</li>
+				<li>Acessível de Qualquer Lugar</li>
+
+			</ul>
+			<!-- 			: Gerencie matrículas, turmas, notas e frequência com apenas alguns cliques.
+						: Mantenha todos informados com ferramentas de comunicação entre alunos e professores.
+						: Gere relatórios detalhados para tomada de decisões rápidas e precisas.
+						: Plataforma online, segura e otimizada para dispositivos móveis e desktops.
+						Transforme sua gestão educacional com tecnologia moderna e um sistema feito para facilitar o seu dia a dia.
+-->			
+			<div class="div-explicativo">
+				<h3>Pronto para começar?</h3>
+				<p>Explore nossos recursos e descubra como podemos ajudar sua instituição a crescer. Clique abaixo para saber mais!
+				</p>
+				<button>Saiba Mais</button>	
+			</div>
 
 		</div>
 		
 		<div th:replace="fragmentos/fragmentos :: rodape"></div>
 
 	</section>
-	
+	<script src="/js/text.js"></script>
 	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
 	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </body>
