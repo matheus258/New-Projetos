@@ -5,17 +5,17 @@ Este repositório foi criado a partir de vídeo-aulas ao vivo, livros e pesquisa
 
 ## 📚 Categorias de Projetos  
 
-### 1. **JavaScript**  
+### 1. **Java**  
+Projetos voltados ao estudo de back-end com foco no framework Spring Boot.  
+🔗 [Acesse os projetos Java](https://github.com/matheus258/New-Projetos/tree/main/Projects%20Java)  
+
+### 2. **JavaScript**  
 Projetos desenvolvidos para estudar e explorar conceitos da linguagem JavaScript.  
 🔗 [Acesse os projetos JavaScript](https://github.com/matheus258/New-Projetos/tree/main/Projects%20JavaScript)  
 
-### 2. **React.js**  
+### 3. **React.js**  
 Aplicações criadas com React.js para desenvolvimento de interfaces modernas e dinâmicas.  
 🔗 [Acesse os projetos React.js](https://github.com/matheus258/New-Projetos/tree/main/Project-React)  
-
-### 3. **Java**  
-Projetos voltados ao estudo de back-end com foco no framework Spring Boot.  
-🔗 [Acesse os projetos Java](https://github.com/matheus258/New-Projetos/tree/main/Projects%20Java)  
 
 ---
 
