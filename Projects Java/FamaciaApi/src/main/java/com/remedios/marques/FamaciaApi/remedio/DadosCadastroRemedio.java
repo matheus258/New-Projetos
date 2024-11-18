@@ -9,4 +9,5 @@ public record DadosCadastroRemedio(
 		String validade,
 		Laboratorio laboratorio) {
 	
+	
 }
