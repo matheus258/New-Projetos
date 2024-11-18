@@ -30,7 +30,7 @@ public class itemController {
         return itemService.createItem(item);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     public Item updateItem(@PathVariable Long id, @RequestBody Item itemDetails){
         return itemService.updateItem(id, itemDetails);
     }
