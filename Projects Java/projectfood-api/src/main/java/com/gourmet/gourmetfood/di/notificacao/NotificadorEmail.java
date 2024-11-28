@@ -1,11 +1,9 @@
 package com.gourmet.gourmetfood.di.notificacao;
 
-import org.springframework.stereotype.Component;
-
 import com.gourmet.gourmetfood.di.modelo.Cliente;
 
 
-public class NotificadorEmail implements Notificaor {
+public class NotificadorEmail implements Notificador {
 	
 	private boolean caixaAlta;
 	private String hostServidorSmtp;
@@ -13,7 +11,7 @@ public class NotificadorEmail implements Notificaor {
 	public NotificadorEmail(String hostServidorSmtp) {
 		// TODO Auto-generated constructor stub
 		this.hostServidorSmtp = hostServidorSmtp;
-		System.out.println("NotificadorEmail");
+		System.out.println("Notificador Email");
 	
 	}
 	

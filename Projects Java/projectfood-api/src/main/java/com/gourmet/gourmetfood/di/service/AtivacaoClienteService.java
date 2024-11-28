@@ -3,20 +3,17 @@ package com.gourmet.gourmetfood.di.service;
 import org.springframework.stereotype.Component;
 
 import com.gourmet.gourmetfood.di.modelo.Cliente;
-import com.gourmet.gourmetfood.di.notificacao.Notificaor;
+import com.gourmet.gourmetfood.di.notificacao.Notificador;
 
 @Component
 public class AtivacaoClienteService {
 	
-	private Notificaor notificador;
-	
-	
-	
-	public AtivacaoClienteService(Notificaor notificador) {
+	private Notificador notificador;
+
+	public AtivacaoClienteService(Notificador notificador) {
 		this.notificador = notificador;
 		System.out.println("AtivacaoClienteService: "+ notificador);
 	}
-
 
 	public void ativar(Cliente cliente) {
 		cliente.ativar();
