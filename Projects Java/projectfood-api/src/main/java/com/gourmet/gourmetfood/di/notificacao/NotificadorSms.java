@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component;
 
 public class NotificadorSms implements Notificador{
     private boolean caixaAlta;
-    private String hostServidorSmtp;
+    private String hostServidorSms;
 
     public NotificadorSms(String hostServidorSmtp) {
-        this.hostServidorSmtp = hostServidorSmtp;
+        this.hostServidorSms = hostServidorSmtp;
         System.out.println("Notificador SMS");
     }
 
@@ -18,8 +18,8 @@ public class NotificadorSms implements Notificador{
         if(this.caixaAlta) {
             mensagem = mensagem.toUpperCase();
         }
-        System.out.printf("Notificando %s através do numero %s usando SMTP %s : %s\n",
-                cliente.getNome(), cliente.getTelefone(),this.hostServidorSmtp, mensagem);
+        System.out.printf("Notificando %s através do numero %s usando SMS %s : %s\n",
+                cliente.getNome(), cliente.getTelefone(),this.hostServidorSms, mensagem);
     }
     public void setCaixaAlta(boolean caixaAlta) {
         this.caixaAlta = caixaAlta;

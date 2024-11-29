@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 import com.gourmet.gourmetfood.di.modelo.Cliente;
 import com.gourmet.gourmetfood.di.notificacao.Notificador;
 
-@Component
 public class AtivacaoClienteService {
 	
 	private Notificador notificador;
