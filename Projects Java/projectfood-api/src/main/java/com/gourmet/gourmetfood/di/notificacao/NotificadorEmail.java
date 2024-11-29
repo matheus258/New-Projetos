@@ -1,6 +1,7 @@
 package com.gourmet.gourmetfood.di.notificacao;
 
 import com.gourmet.gourmetfood.di.modelo.Cliente;
+import org.springframework.stereotype.Component;
 
 
 public class NotificadorEmail implements Notificador {
