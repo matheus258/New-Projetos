@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -39,5 +40,16 @@ public class EmprestimoController {
             emprestimo.setDataDevolucao(novoEmprestimo.getDataDevolucao());
             return repository.save(emprestimo);
         }).orElseThrow(() -> new RuntimeException("Empréstimo não encontrado com o ID: "+ id));
+    }
+
+    @DeleteMapping("/{id}")
+    public String deletarEmprestimo(@PathVariable Long id){
+        repository.deleteById(id);
+        return "Emprestimo deletado com sucesso! ID: "+id;
+    }
+
+    @GetMapping("/atrasados")
+    public List<Emprestimo> listarEmprestimosAtrasados() {
+        return repository.findByDataDevolucaoBeforeAndDataDevolucaoNotNull(LocalDate.now());
     }
 }

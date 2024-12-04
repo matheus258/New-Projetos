@@ -1,6 +1,8 @@
 package com.bibliotecasystem.biblioteca.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.FutureOrPresent;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 
@@ -18,7 +20,9 @@ public class Emprestimo {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
+    @NotNull(message = "Data de empréstimo é obrigatória!")
     private LocalDate dataEmprestimo;
+    @FutureOrPresent(message = "A data de devolução deve ser futura ou presente")
     private LocalDate dataDevolucao;
 
     public Long getId() {
