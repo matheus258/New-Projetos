@@ -9,7 +9,10 @@ public class BibliotecaApplication {
 
 	public static void main(String[] args) {
 		// Carregar o arquivo .env
-		Dotenv dotenv = Dotenv.load();
+		Dotenv dotenv = Dotenv.configure().load();
+		System.setProperty("DATABASE_PASSWORD", dotenv.get("DATABASE_PASSWORD"));
+		System.setProperty("DATABASE_USER", dotenv.get("DATABASE_USER"));
+		System.setProperty("DATABASE_URL", dotenv.get("DATABASE_URL"));
 		SpringApplication.run(BibliotecaApplication.class, args);
 	}
 }
