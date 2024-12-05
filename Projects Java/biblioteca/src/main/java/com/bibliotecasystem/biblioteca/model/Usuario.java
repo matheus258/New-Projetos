@@ -11,6 +11,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.management.relation.Role;
 import java.util.Collection;
 import java.util.List;
 
@@ -27,11 +28,19 @@ public class Usuario implements UserDetails {
 
     @NotBlank(message = "Login é obrigatório!")
     private String login;
-
     @NotBlank(message = "A senha é obrigatória!")
     private String senha;
-
     private UserRoles role;
+
+
+    public Usuario() {
+    }
+
+    public Usuario(String login, String senha, UserRoles role){
+        this.login = login;
+        this.senha = senha;
+        this.role = role;
+    }
 
     public Long getId() {
         return id;
@@ -85,7 +94,7 @@ public class Usuario implements UserDetails {
 
     @Override
     public String getPassword() {
-        return "";
+        return this.senha;
     }
 
     @Override
@@ -95,21 +104,25 @@ public class Usuario implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return UserDetails.super.isAccountNonExpired();
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return UserDetails.super.isAccountNonLocked();
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return UserDetails.super.isCredentialsNonExpired();
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return UserDetails.super.isEnabled();
+        return true;
+    }
+
+    public @NotBlank(message = "A senha é obrigatória!") String getSenha() {
+        return senha;
     }
 }
