@@ -8,6 +8,14 @@ Este repositório foi criado a partir de vídeo-aulas ao vivo, livros e pesquisa
 ### 1. **Java**  
 Projetos voltados ao estudo de back-end com foco no framework Spring Boot. Aqui estão os projetos atuais:  
 
+#### 🔹 [Biblioteca API](https://github.com/matheus258/New-Projetos/tree/main/Projects%20Java/biblioteca)  
+Sistema de gerenciamento de uma biblioteca com:  
+- Endpoints para operações CRUD (Criar, Ler, Atualizar e Deletar) de livros.  
+- **DTOs** (Data Transfer Objects) para estruturar a troca de dados entre a API e o cliente.  
+- **JPA** e banco de dados **MySQL** para persistência dos dados.  
+- Implementação de tratamento de exceções e mensagens personalizadas.  
+- Desenvolvido com **Java Spring Boot** e boas práticas de RESTful APIs.  
+
 #### 🔹 [Loja Eletrônica](https://github.com/matheus258/New-Projetos/tree/main/Projects%20Java/eletronico)  
 Projeto de uma loja eletrônica com:  
 - **JPA** para gerenciamento de dados.  
