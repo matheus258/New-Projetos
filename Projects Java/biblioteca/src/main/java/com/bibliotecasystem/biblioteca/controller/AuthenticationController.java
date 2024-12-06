@@ -1,7 +1,9 @@
 package com.bibliotecasystem.biblioteca.controller;
 
-import com.bibliotecasystem.biblioteca.model.AuthenticationDTO;
-import com.bibliotecasystem.biblioteca.model.RegisterDTO;
+import com.bibliotecasystem.biblioteca.dto.LoginResponseDTO;
+import com.bibliotecasystem.biblioteca.infra.security.TokenService;
+import com.bibliotecasystem.biblioteca.dto.AuthenticationDTO;
+import com.bibliotecasystem.biblioteca.dto.RegisterDTO;
 import com.bibliotecasystem.biblioteca.model.Usuario;
 import com.bibliotecasystem.biblioteca.repository.UsuarioRepository;
 import jakarta.validation.Valid;
@@ -20,13 +22,17 @@ public class AuthenticationController {
     private AuthenticationManager authenticationManager;
     @Autowired
     private UsuarioRepository repository;
+    @Autowired
+    private TokenService tokenService;
 
     @PostMapping("/login")
     public ResponseEntity login(@RequestBody @Valid AuthenticationDTO data){
         var usernamePassword = new UsernamePasswordAuthenticationToken(data.login(), data.senha());
         var auth = this.authenticationManager.authenticate(usernamePassword);
 
-        return ResponseEntity.ok().build();
+        var token = tokenService.generateToken((Usuario) auth.getPrincipal());
+
+        return ResponseEntity.ok(new LoginResponseDTO(token));
     }
 
     @PostMapping("/register")

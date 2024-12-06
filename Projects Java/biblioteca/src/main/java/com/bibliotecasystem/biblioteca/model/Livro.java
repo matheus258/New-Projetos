@@ -1,9 +1,11 @@
 package com.bibliotecasystem.biblioteca.model;
 
+import com.bibliotecasystem.biblioteca.dto.LivroResponseDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.Valid;
 
 @Entity
 public class Livro {
@@ -15,6 +17,16 @@ public class Livro {
     private String autor;
     private String isbn;
     private Integer anoPublicado;
+
+    public Livro() {
+    }
+
+    public Livro(@Valid LivroResponseDTO body) {
+        this.titulo = body.titulo();
+        this.autor = body.autor();
+        this.isbn = body.isbn();
+        this.anoPublicado = body.anoPublicado();
+    }
 
     public Long getId() {
         return id;

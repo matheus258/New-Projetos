@@ -1,4 +1,4 @@
-package com.bibliotecasystem.biblioteca.model;
+package com.bibliotecasystem.biblioteca.dto;
 
 import com.bibliotecasystem.biblioteca.enums.UserRoles;
 

@@ -1,10 +1,7 @@
 package com.bibliotecasystem.biblioteca.model;
 
 import com.bibliotecasystem.biblioteca.enums.UserRoles;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.security.core.GrantedAuthority;
@@ -30,6 +27,8 @@ public class Usuario implements UserDetails {
     private String login;
     @NotBlank(message = "A senha é obrigatória!")
     private String senha;
+
+    @Enumerated(EnumType.STRING)
     private UserRoles role;
 
 
