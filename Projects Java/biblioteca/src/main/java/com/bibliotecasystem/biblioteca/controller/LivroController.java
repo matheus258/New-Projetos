@@ -18,15 +18,6 @@ public class LivroController {
     @Autowired
     private LivroRepository repository;
 
-//    @GetMapping
-//    public  List<Livro> listarTodos(){
-//        List<Livro> livros = repository.findAll();
-//        if(livros.isEmpty()){
-//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Nenhum livro foi encontrado!");
-//        }
-//        return livros;
-//    }
-
     @GetMapping
     public ResponseEntity listarTodos() {
         List<LivroResponseDTO> livros = this.repository.findAll()
@@ -39,15 +30,12 @@ public class LivroController {
 
 
     @GetMapping("/{id}")
-    public Livro listarPorId(@PathVariable Long id){
-        return repository.findById(id)
+    public ResponseEntity listarPorId(@PathVariable Long id){
+        Livro livro = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Livro não encontrado"));
+        return ResponseEntity.ok(livro);
     }
 
-//    @PostMapping
-//    public Livro adicionarLivro(@RequestBody Livro livro){
-//        return repository.save(livro);
-//    }
     @PostMapping
     public ResponseEntity postProduct(@RequestBody @Valid LivroResponseDTO body){
         Livro newLivro = new Livro(body);
@@ -57,20 +45,22 @@ public class LivroController {
     }
 
     @PutMapping("/{id}")
-    public Livro atualizarLivro(@PathVariable Long id, @RequestBody Livro livroAtualizado){
-        return repository.findById(id).map(livro -> {
-            livro.setTitulo(livroAtualizado.getTitulo());
-            livro.setAutor(livroAtualizado.getAutor());
-            livro.setIsbn(livroAtualizado.getIsbn());
-            livro.setAnoPublicado(livroAtualizado.getAnoPublicado());
-            return  repository.save(livro);
-        }).orElseThrow(() -> new RuntimeException("Livro não encontrado com o ID: " + id));
+    public ResponseEntity atualizarLivro(@PathVariable Long id, @RequestBody Livro livroAtualizado){
+        Livro livro = repository.findById(id).orElseThrow(() ->
+                new RuntimeException("Livro não encontrado com o ID: " + id));
+        livro.setTitulo(livroAtualizado.getTitulo());
+        livro.setAutor(livroAtualizado.getAutor());
+        livro.setIsbn(livroAtualizado.getIsbn());
+        livro.setAnoPublicado(livroAtualizado.getAnoPublicado());
+
+        repository.save(livro);
+        return ResponseEntity.ok(livro);
     }
 
     @DeleteMapping("/{id}")
-    public String deletarLivro(@PathVariable Long id){
+    public ResponseEntity deletarLivro(@PathVariable Long id){
         repository.deleteById(id);
-        return "Livro deletado com sucesso! ID: "+ id;
+        return ResponseEntity.ok("Livro deletado com sucesso! ID: "+ id);
     }
 
 }
