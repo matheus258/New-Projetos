@@ -4,6 +4,6 @@ import org.antlr.v4.runtime.misc.NotNull;
 
 import java.math.BigDecimal;
 
-public record ProductsRecordDTO(String name, BigDecimal valor) {
+public record ProductsRecordDTO(String name, BigDecimal value) {
 
 }
