@@ -1,5 +1,6 @@
 package com.bibliotecasystem.biblioteca.model;
 
+import com.bibliotecasystem.biblioteca.dto.EmprestimoResponseDTO;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotNull;
@@ -24,6 +25,16 @@ public class Emprestimo {
     private LocalDate dataEmprestimo;
     @FutureOrPresent(message = "A data de devolução deve ser futura ou presente")
     private LocalDate dataDevolucao;
+
+    public Emprestimo() {
+    }
+
+    public Emprestimo( Usuario usuario, Livro livro, LocalDate dataEmprestimo, LocalDate dataDevolucao) {
+        this.livro = livro;
+        this.usuario = usuario;
+        this.dataEmprestimo = dataEmprestimo;
+        this.dataDevolucao = dataDevolucao;
+    }
 
     public Long getId() {
         return id;

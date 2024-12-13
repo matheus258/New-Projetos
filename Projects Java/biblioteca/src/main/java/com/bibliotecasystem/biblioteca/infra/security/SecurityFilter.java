@@ -25,12 +25,21 @@ public class SecurityFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         var token = this.recoverToken(request);
-        if (token != null){
+        if (token != null ){
+            System.out.println("Token recuperado: " + token); // Adicione um log para depurar o token
             var login = tokenService.validateToken(token);
+            System.out.println("Login após validação do token: " + login); // Verifique o login recuperado
             UserDetails user = userRepository.findByLogin(login);
 
-            var authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
-            SecurityContextHolder.getContext().setAuthentication(authentication);
+            if (user != null) {
+                var authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
+                SecurityContextHolder.getContext().setAuthentication(authentication);
+            } else {
+                System.out.println("Usuário não encontrado no banco de dados.");
+            }
+        }
+        else {
+            System.out.println("Token não encontrado na requisição.");
         }
         filterChain.doFilter(request, response);
     }
@@ -38,6 +47,8 @@ public class SecurityFilter extends OncePerRequestFilter {
     private String recoverToken(HttpServletRequest request){
         var autoHeader = request.getHeader("Authorization");
         if (autoHeader == null) return null;
-        return autoHeader.replace("Bearer ", "");
+        String token = autoHeader.replace("Bearer ", "");
+        System.out.println("Token recuperado: " + token); // Adicione um log para depurar o token
+        return token;
     }
 }

@@ -1,52 +1,47 @@
 package com.bibliotecasystem.biblioteca.model;
 
 import com.bibliotecasystem.biblioteca.enums.UserRoles;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
+import com.bibliotecasystem.biblioteca.repository.UsuarioRepository;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.management.relation.Role;
+import jakarta.persistence.*;
 import java.util.Collection;
-import java.util.List;
 
 @Entity
 public class Usuario implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotBlank(message = "Nome é obrigatório!")
     private String nome;
-    @Email(message = "Email inválido!")
     private String email;
     private String telefone;
-
-    @NotBlank(message = "Login é obrigatório!")
     private String login;
-    @NotBlank(message = "A senha é obrigatória!")
     private String senha;
+    private String role;
 
-    @Enumerated(EnumType.STRING)
-    private UserRoles role;
+    public Usuario(){
 
-
-    public Usuario() {
     }
 
-    public Usuario(String login, String senha, UserRoles role){
-        this.login = login;
-        this.senha = senha;
-        this.role = role;
+    public Usuario(String nome, String email, String telefone, String login, String encryptedPassword, UserRoles role) {
     }
 
-    public Long getId() {
-        return id;
+    // Construtores, getters e setters omitidos para brevidade
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null; // Retorne os papéis, se existirem
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    @Override
+    public String getPassword() {
+        return senha;
+    }
+
+    @Override
+    public String getUsername() {
+        return login;
     }
 
     public String getNome() {
@@ -73,32 +68,28 @@ public class Usuario implements UserDetails {
         this.telefone = telefone;
     }
 
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
     public void setSenha(String senha) {
         this.senha = senha;
     }
 
-    public @NotBlank(message = "Login é obrigatório!") String getLogin() {
-        return login;
+    public String getRole() {
+        return role;
     }
 
-    public void setLogin(@NotBlank(message = "Login é obrigatório!") String login) {
-        this.login = login;
-    }
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        if (this.role == UserRoles.ADMIN) return List.of(new SimpleGrantedAuthority("ROLE_ADMIN"), new SimpleGrantedAuthority("ROLE_USER"));
-        else return List.of(new SimpleGrantedAuthority("ROLE_USER"));
-    }
-
-    @Override
-    public String getPassword() {
-        return this.senha;
-    }
-
-    @Override
-    public String getUsername() {
-        return login;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     @Override
@@ -119,9 +110,5 @@ public class Usuario implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
-    }
-
-    public @NotBlank(message = "A senha é obrigatória!") String getSenha() {
-        return senha;
     }
 }

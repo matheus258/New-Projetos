@@ -19,7 +19,7 @@ public class LivroController {
     private LivroRepository repository;
 
     @GetMapping
-    public ResponseEntity listarTodos() {
+    public ResponseEntity listarTodosLivros() {
         List<LivroResponseDTO> livros = this.repository.findAll()
                 .stream()
                 .map(LivroResponseDTO::new)
@@ -27,7 +27,6 @@ public class LivroController {
 
         return ResponseEntity.ok(livros);  // Retorna a lista correta de DTOs.
     }
-
 
     @GetMapping("/{id}")
     public ResponseEntity listarPorId(@PathVariable Long id){

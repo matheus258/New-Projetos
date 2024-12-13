@@ -1,9 +1,11 @@
 package com.bibliotecasystem.biblioteca.controller;
 
+import com.bibliotecasystem.biblioteca.dto.EmprestimoResponseDTO;
 import com.bibliotecasystem.biblioteca.model.Emprestimo;
 import com.bibliotecasystem.biblioteca.repository.EmprestimoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -17,18 +19,32 @@ public class EmprestimoController {
     @Autowired
     private EmprestimoRepository repository;
 
+
     @GetMapping
-    public List<Emprestimo> listarTodosEmprestimos(){
-        List<Emprestimo> emprestimos = repository.findAll();
-        if (emprestimos.isEmpty()){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Nenhum empréstimo encontrado!");
-        }
-        return emprestimos;
+    public ResponseEntity listarTodosEmprestimos(){
+        List<EmprestimoResponseDTO> emprestimos = this.repository.findAll()
+                .stream()
+                .map(EmprestimoResponseDTO::new)
+                .toList();
+//        if (emprestimos.isEmpty()){
+//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Nenhum empréstimo encontrado!");
+//        }
+        return ResponseEntity.ok(emprestimos);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity listarEmprestimoPorId(@PathVariable Long id){
+        Emprestimo emprestimo = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Empréstimo nao encontrado!"));
+        return ResponseEntity.ok(emprestimo);
     }
 
     @PostMapping
-    public Emprestimo adicionarEmprestimo(@RequestBody Emprestimo emprestimo){
-        return repository.save(emprestimo);
+    public ResponseEntity adicionarEmprestimo(@RequestBody Emprestimo body){
+        Emprestimo emprestimo = repository.save(body);
+        this.repository.save(emprestimo);
+
+        return ResponseEntity.ok().build();
     }
 
     @PutMapping("{id}")
