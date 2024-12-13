@@ -46,7 +46,7 @@ O sistema de autenticação é realizado via **JWT**. Ele permite três tipos de
   **Exemplo de requisição:**
   ```json
   {
-    "email": "usuario@exemplo.com",
+    "login": "admin",
     "senha": "senha123"
   }
   ```
